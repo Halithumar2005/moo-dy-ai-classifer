@@ -86,7 +86,7 @@ const Index = () => {
           </div>
           
           <h1 className="text-6xl md:text-8xl font-bold text-primary mb-6 animate-fade-in drop-shadow-lg">
-            Indian Cattle Breed Classifier
+            AI-Based Bovine Breed  Identification
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto animate-fade-in" style={{animationDelay: '0.2s'}}>
