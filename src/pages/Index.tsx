@@ -4,8 +4,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Upload, Brain, Database, Dna, Mail, Phone, MapPin, ChevronDown } from "lucide-react";
+import { Upload, Brain, Database, Dna, Mail, Phone, MapPin, ChevronDown, Sparkles } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import Navigation from "@/components/Navigation";
+import CowChatbot from "@/components/CowChatbot";
 import heroBackground from "@/assets/hero-cow-bg.jpg";
 import cowFace from "@/assets/cow-face.jpg";
 import cowIcon from "@/assets/cow-icon.png";
@@ -62,6 +64,9 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      <Navigation />
+      <CowChatbot />
+      
       {/* Hero Section */}
       <section 
         id="home"
@@ -80,13 +85,19 @@ const Index = () => {
             <img src={cowIcon} alt="Cow" className="w-24 h-24 mx-auto" />
           </div>
           
-          <h1 className="text-6xl md:text-8xl font-bold text-primary mb-6 animate-fade-in">
+          <h1 className="text-6xl md:text-8xl font-bold text-primary mb-6 animate-fade-in drop-shadow-lg">
             Indian Cattle Breed Classifier
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto animate-fade-in" style={{animationDelay: '0.2s'}}>
+          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto animate-fade-in" style={{animationDelay: '0.2s'}}>
             AI-powered system to identify and classify Indian cattle breeds using advanced deep learning
           </p>
+
+          <div className="flex items-center justify-center gap-2 mb-12 animate-fade-in" style={{animationDelay: '0.3s'}}>
+            <Sparkles className="w-5 h-5 text-accent" />
+            <span className="text-lg font-semibold text-accent">Hybrid VGG16 + Transformer Architecture</span>
+            <Sparkles className="w-5 h-5 text-accent" />
+          </div>
           
           <Button 
             size="lg" 
@@ -106,9 +117,14 @@ const Index = () => {
       {/* About Section */}
       <section id="about" className="py-20 bg-gradient-to-b from-background to-secondary/10">
         <div className="container mx-auto px-4">
-          <h2 className="text-5xl font-bold text-center mb-16 text-primary">
-            About the Project
-          </h2>
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-5xl font-bold mb-4 text-primary">
+              About the Project
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Leveraging cutting-edge AI to preserve and promote India's rich cattle heritage
+            </p>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <Card className="glossy-card border-2 hover:scale-105 transition-transform duration-300">
@@ -181,9 +197,14 @@ const Index = () => {
       {/* Classification Section */}
       <section id="classify" className="py-20 bg-gradient-to-b from-secondary/10 to-background">
         <div className="container mx-auto px-4">
-          <h2 className="text-5xl font-bold text-center mb-16 text-primary">
-            Classify Your Cattle
-          </h2>
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-5xl font-bold mb-4 text-primary">
+              Classify Your Cattle
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Upload an image and let our AI identify the breed instantly
+            </p>
+          </div>
 
           <div className="max-w-4xl mx-auto">
             <Card className="glossy-card border-2 border-accent/20">
@@ -282,9 +303,14 @@ const Index = () => {
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-gradient-to-b from-secondary/10 to-background">
         <div className="container mx-auto px-4">
-          <h2 className="text-5xl font-bold text-center mb-16 text-primary">
-            Get In Touch
-          </h2>
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-5xl font-bold mb-4 text-primary">
+              Get In Touch
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Have questions? We're here to help with your cattle classification needs
+            </p>
+          </div>
 
           <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
             <Card className="glossy-card border-2">
